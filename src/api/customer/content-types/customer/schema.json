@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "singularName": "customer",
+    "pluralName": "customers",
+    "displayName": "Customer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "street": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "purchases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::purchase.purchase",
+      "mappedBy": "customer"
+    }
+  }
+}

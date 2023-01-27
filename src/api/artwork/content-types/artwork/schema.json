@@ -4,7 +4,8 @@
   "info": {
     "singularName": "artwork",
     "pluralName": "artworks",
-    "displayName": "Artwork"
+    "displayName": "Artwork",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,7 +17,8 @@
       "required": true
     },
     "url": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "urlFrame": {
       "type": "string"
@@ -27,23 +29,36 @@
     "urlFrameFullRes": {
       "type": "string"
     },
+    "buyUrl": {
+      "type": "string"
+    },
     "sound": {
       "type": "boolean",
-      "default": false,
-      "required": false
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
+      "default": false
     },
     "date": {
       "type": "datetime"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
     },
     "artists": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::artist.artist",
       "inversedBy": "artworks"
+    },
+    "imageMain": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

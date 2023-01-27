@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "purchases",
+  "info": {
+    "singularName": "purchase",
+    "pluralName": "purchases",
+    "displayName": "purchase",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "purchases"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Tier 1",
+        "Tier 2",
+        "Tier 3",
+        "Tier 4",
+        "Share"
+      ]
+    },
+    "companyInvoice": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "paymentMethod": {
+      "type": "enumeration",
+      "enum": [
+        "Stripe",
+        "Cash",
+        "Crypto",
+        "Direct Transfer",
+        "Other"
+      ]
+    }
+  }
+}

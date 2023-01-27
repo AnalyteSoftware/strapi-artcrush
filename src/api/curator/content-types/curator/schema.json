@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "curators",
+  "info": {
+    "singularName": "curator",
+    "pluralName": "curators",
+    "displayName": "Curator",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "websiteUrl": {
+      "type": "string"
+    },
+    "twitterUrl": {
+      "type": "string"
+    },
+    "instaUrl": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "lead": {
+      "type": "boolean",
+      "default": false
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
