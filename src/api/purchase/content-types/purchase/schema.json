@@ -4,7 +4,7 @@
   "info": {
     "singularName": "purchase",
     "pluralName": "purchases",
-    "displayName": "purchase",
+    "displayName": "Purchase",
     "description": ""
   },
   "options": {
@@ -12,9 +12,33 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "date": {
-      "type": "datetime",
+    "product": {
+      "type": "enumeration",
+      "enum": [
+        "Tier 1",
+        "Tier 2",
+        "Tier 3",
+        "Tier 4",
+        "Share",
+        "Other"
+      ],
       "required": true
+    },
+    "paymentMethod": {
+      "type": "enumeration",
+      "enum": [
+        "stripe",
+        "cash",
+        "directTransfer",
+        "crypto",
+        "other"
+      ]
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "price": {
+      "type": "decimal"
     },
     "customer": {
       "type": "relation",
@@ -22,33 +46,10 @@
       "target": "api::customer.customer",
       "inversedBy": "purchases"
     },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "Tier 1",
-        "Tier 2",
-        "Tier 3",
-        "Tier 4",
-        "Share"
-      ]
-    },
     "companyInvoice": {
       "type": "boolean",
       "default": false,
       "required": true
-    },
-    "price": {
-      "type": "decimal"
-    },
-    "paymentMethod": {
-      "type": "enumeration",
-      "enum": [
-        "Stripe",
-        "Cash",
-        "Crypto",
-        "Direct Transfer",
-        "Other"
-      ]
     }
   }
 }

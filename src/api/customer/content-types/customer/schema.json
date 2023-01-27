@@ -43,6 +43,9 @@
       "relation": "oneToMany",
       "target": "api::purchase.purchase",
       "mappedBy": "customer"
+    },
+    "VATNumber": {
+      "type": "string"
     }
   }
 }
