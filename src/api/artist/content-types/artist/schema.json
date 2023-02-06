@@ -41,6 +41,15 @@
       "relation": "manyToMany",
       "target": "api::artwork.artwork",
       "mappedBy": "artists"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer",
+      "mappedBy": "artist"
+    },
+    "city": {
+      "type": "string"
     }
   }
 }

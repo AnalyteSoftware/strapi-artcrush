@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exhibitions",
+  "info": {
+    "singularName": "exhibition",
+    "pluralName": "exhibitions",
+    "displayName": "Exhibition"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "startDate": {
+      "type": "datetime"
+    },
+    "endDate": {
+      "type": "datetime"
+    },
+    "artworks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::artwork.artwork",
+      "inversedBy": "exhibitions"
+    }
+  }
+}

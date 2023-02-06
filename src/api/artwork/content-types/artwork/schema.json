@@ -18,7 +18,7 @@
     },
     "url": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "urlFrame": {
       "type": "string"
@@ -51,14 +51,21 @@
       "inversedBy": "artworks"
     },
     "imageMain": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "exhibitions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::exhibition.exhibition",
+      "mappedBy": "artworks"
     }
   }
 }
