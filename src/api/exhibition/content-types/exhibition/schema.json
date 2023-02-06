@@ -4,7 +4,8 @@
   "info": {
     "singularName": "exhibition",
     "pluralName": "exhibitions",
-    "displayName": "Exhibition"
+    "displayName": "Exhibition",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -31,6 +32,14 @@
       "relation": "manyToMany",
       "target": "api::artwork.artwork",
       "inversedBy": "exhibitions"
+    },
+    "singleLocation": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "adress": {
+      "type": "string"
     }
   }
 }
