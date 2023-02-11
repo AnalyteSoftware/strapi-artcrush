@@ -68,8 +68,7 @@
       "mappedBy": "artworks"
     },
     "video": {
-      "type": "boolean",
-      "default": false
+      "type": "boolean"
     }
   }
 }
