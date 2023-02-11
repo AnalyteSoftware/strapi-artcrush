@@ -66,6 +66,10 @@
       "relation": "manyToMany",
       "target": "api::exhibition.exhibition",
       "mappedBy": "artworks"
+    },
+    "video": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
