@@ -50,6 +50,9 @@
     },
     "city": {
       "type": "string"
+    },
+    "websiteUrl": {
+      "type": "string"
     }
   }
 }
