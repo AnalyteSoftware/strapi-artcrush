@@ -40,6 +40,9 @@
     },
     "adress": {
       "type": "string"
+    },
+    "eventUrl": {
+      "type": "string"
     }
   }
 }
