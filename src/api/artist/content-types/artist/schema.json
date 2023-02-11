@@ -53,6 +53,9 @@
     },
     "websiteUrl": {
       "type": "string"
+    },
+    "linkTreeUrl": {
+      "type": "string"
     }
   }
 }
