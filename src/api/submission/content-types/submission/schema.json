@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "submissions",
+  "info": {
+    "singularName": "submission",
+    "pluralName": "submissions",
+    "displayName": "Submission"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "twitterUrl": {
+      "type": "string"
+    },
+    "instaUrl": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Artist",
+        "Collector",
+        "Potential Investor",
+        "Other"
+      ]
+    },
+    "msg": {
+      "type": "text"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}
