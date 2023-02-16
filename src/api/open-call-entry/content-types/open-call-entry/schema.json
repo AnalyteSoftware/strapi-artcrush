@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "open_call_entries",
+  "info": {
+    "singularName": "open-call-entry",
+    "pluralName": "open-call-entries",
+    "displayName": "OpenCallEntry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "artistName": {
+      "type": "string"
+    },
+    "exhibition": {
+      "type": "enumeration",
+      "enum": [
+        "NFT.PARIS"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "video": {
+      "type": "boolean",
+      "default": false
+    },
+    "sound": {
+      "type": "boolean",
+      "default": false
+    },
+    "buyUrl": {
+      "type": "string"
+    }
+  }
+}

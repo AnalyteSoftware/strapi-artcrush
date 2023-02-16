@@ -42,6 +42,12 @@
     },
     "msg": {
       "type": "text"
+    },
+    "websiteUrl": {
+      "type": "string"
+    },
+    "linktreeUrl": {
+      "type": "string"
     }
   }
 }
