@@ -4,7 +4,8 @@
   "info": {
     "singularName": "submission",
     "pluralName": "submissions",
-    "displayName": "Submission"
+    "displayName": "Submission",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,6 +21,9 @@
     "instaUrl": {
       "type": "string"
     },
+    "email": {
+      "type": "email"
+    },
     "country": {
       "type": "string"
     },
@@ -32,14 +36,12 @@
         "Artist",
         "Collector",
         "Potential Investor",
+        "Product Art Sel",
         "Other"
       ]
     },
     "msg": {
       "type": "text"
-    },
-    "email": {
-      "type": "email"
     }
   }
 }
