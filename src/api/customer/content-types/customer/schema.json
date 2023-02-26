@@ -12,10 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "firstName": {
-      "type": "string"
-    },
-    "lastName": {
+    "name": {
       "type": "string"
     },
     "email": {
@@ -271,6 +268,12 @@
       "relation": "oneToOne",
       "target": "api::artist.artist",
       "inversedBy": "customer"
+    },
+    "customerId": {
+      "type": "string"
+    },
+    "dateEnter": {
+      "type": "datetime"
     }
   }
 }
