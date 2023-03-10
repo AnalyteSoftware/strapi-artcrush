@@ -14,6 +14,23 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  email: {
+    config: {
+      provider: "strapi-provider-email-postmark",
+      providerOptions: {
+        apiKey: env("POSTMARK_API"),
+      },
+      settings: {
+        defaultMessageStream: "outbound",
+        defaultFrom: "info@artcrush.gallery",
+        defaultTo: "info@artcrush.gallery",
+        defaultReplyTo: "info@artcrush.gallery",
+        defaultVariables: {
+          sentBy: "strapi",
+        },
+      },
+    },
+  },
   "vercel-deploy": {
     enabled: true,
     config: {
