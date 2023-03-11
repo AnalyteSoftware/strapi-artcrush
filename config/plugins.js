@@ -41,5 +41,12 @@ module.exports = ({ env }) => ({
       roles: ["strapi-super-admin", "strapi-editor", "strapi-author"],
     },
   },
+  "users-permissions": {
+    config: {
+      jwt: {
+        expiresIn: "7d",
+      },
+    },
+  },
   // ...
 });
